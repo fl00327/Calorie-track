@@ -1,0 +1,280 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+  <title><%= t('.app_title') %></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+  <style>
+  .columns:nth-child(2)
+  {margin-top: -10rem;}
+  </style>
+
+  <section class="hero is-info is-small">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title">
+          <%= t('.track') %>
+        </p>
+        <p class="subtitle">
+          <%= t('.back') %>
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="box cta">
+    <p class="has-text-centered">
+      <% if user_signed_in? %>
+        <span class="tag is-primary"><%= t('.zack') %><%= link_to "Create Category", categories_path %></span>
+      <% else %>
+        <span class="tag is-primary"><%= t('.login') %></span><%= t('.cool') %>
+      <% end %>
+    </p>
+  </div>
+  <section class="container">
+    <div class="columns features">
+      <div class="column is-4">
+        <div class="card is-shady">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://3dtxp19t9eb3fmumt31248pw-wpengine.netdna-ssl.com/uploads/2020/09/Science-and-difficulty-of-calorie-tracking-whoop.png" alt="Placeholder image" class="modal-button" data-target="modal-image2">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4>Weight-Loss</h4>
+              <p>People Want to Stay fit and this application's sole purpose is to give people a chance to stay fit and try to track what they eat everday. Now you can also easily track your weight, just add your weight and it will let you know, what you weighed on a specific day.</p>
+              <span class="button is-link modal-button" data-target="modal-image2">Train</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="card is-shady">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://contents.mediadecathlon.com/p1793850/600cr400/k$53ffb575330c7f369bffddac4f3952ea/DOMYOS%20SWEAT%20RELAXATION%20YOGA%20FEMME%20PE20.jpg?f=600x400" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4>Entries</h4>
+              <p>We take it to another level, Calorie Track is an idea that is going to uniquely benifit people's life, Now you cant forget what you ate yesterday as we got your back.</p>
+              <p>When you are signed in, and you want to see your entries press the noodle bar icon on the top left corner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-4 modal-button" data-target="modal-image">
+        <div class="card is-shady">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://img.freepik.com/free-vector/people-exercising-indoors-home-yoga-fitness-healthy-lifestyle_190729-96.jpg?size=626&ext=jpg" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h4>Categories</h4>
+              <p>To Start Tracking You need to first create a category for your meal, which can be <strong>Weight-Loss, Building Muscle & Snacks</strong> so you know that what you ate at that specific time and at a later time it will help you.</p>
+              <span class="button is-link modal-button" data-target="modal-image">Aerobatics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <article class="notification media has-background-white">
+              <figure class="media-left">
+                <span class="icon">
+                  <i class="has-text-warning fa fa-columns fa-lg"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4"><%= t('.calory') %></h1>
+                  <p class="is-size-5 subtitle">
+                    The power of tracking <strong>Calories</strong> in a simple interface
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-info">
+                  <i class="fa fa-lg fa-wpforms"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4"><%= t('.weight') %></h1>
+                  <p class="is-size-5 subtitle">
+                    Add your weight to <strong>Track-it</strong>, for yourself
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-danger">
+                  <i class="fa fa-lg fa-cubes"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4"><%= t('.protien') %></h1>
+                  <p class="is-size-5 subtitle">
+                    Give a specific value for your protien field
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-grey">
+                  <i class="fa fa-lg fa-cogs"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4"><%= t('.fat') %></h1>
+                  <p class="is-size-5 subtitle">
+                    How much fat you ate you easily <strong>Log that in</strong>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-primary">
+                  <i class="fa fa-lg fa-superpowers"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4"><%= t('.carb') %></h1>
+                  <p class="is-size-5 subtitle">
+                    We all Love Carbs but we still we need to <strong>Track</strong> them
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="notification has-background-white media">
+              <figure class="media-left">
+                <span class="icon has-text-danger">
+                  <i class="fa fa-lg fa-cube"></i>
+                </span>
+              </figure>
+              <div class="media-content">
+                <div class="content">
+                  <h1 class="title is-size-4"><%= t('.category') %></h1>
+                  <p class="is-size-5 subtitle">
+                    Choose the specific/create a category so you can <strong>Select </strong> it from the drop down menu
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <% if user_signed_in? %>
+    <div class="content has-text-centered">
+          <div class="control level-item">
+                 <div class="tags has-addons">
+                <span class="tag is-success"><%= link_to 'Logout', destroy_user_session_path, method: 'delete' %></span>
+             </div>
+      <% else %>
+      <div class="content has-text-centered">
+        <div class="control level-item">
+          <a href="/users/sign_up">
+            <div class="tags has-addons">
+              <span class="tag is-dark">Signup</span>
+            </div>
+          </a>
+          <a href="/users/sign_in">
+            <div class="tags has-addons">
+              <span class="tag is-info">Login</span>
+            </div>
+          </a>
+        </div>
+        </div>
+    <% end %>
+  </footer>
+
+<footer class="footer">
+<div class="content has-text-centered">
+  <p>
+    <strong>Calorie-Track</strong> by <a href="https://www.linkedin.com/in/faseeh-lodhi-00327Efdv/">Faseeh Lodhi</a>. Contact-Us
+    <a href="/contact">+44-7383033853</a>. We are open to Suggestions. <strong>Copyrights-2020</strong>.
+  </p>
+</div>
+</footer>
+  <!--  ===============
+  HERE BE MODALS
+  ===============  -->
+  <!-- 3dFlipVertical card tiny -->
+
+  <!-- end tiny modal card -->
+  <!-- 3dFlipVertical card tiny [butterfly] -->
+
+  <!-- end tiny modal card -->
+  <!-- Image modal -->
+   <div id="modal-image2" class="modal modal-fx-3dSlit">
+     <div class="modal-background"></div>
+     <div class="modal-content is-huge is-image">
+      <!-- content -->
+       <img src="https://3dtxp19t9eb3fmumt31248pw-wpengine.netdna-ssl.com/uploads/2020/09/Science-and-difficulty-of-calorie-tracking-whoop.png" alt="image">
+      <!-- end content -->
+     </div>
+     <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <!-- Image modal -->
+  <div id="modal-image4" class="modal modal-fx-3dSlit">
+    <div class="modal-background"></div>
+    <div class="modal-content is-huge is-image">
+      <!-- content -->
+      <img src="https://source.unsplash.com/hLyd1LukQ7E" alt="butterfly">
+      <!-- end content -->
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <!-- Image modal-->
+  <div id="modal-image" class="modal modal-fx-superScaled">
+    <div class="modal-background"></div>
+    <div class="modal-content  is-image">
+      <!-- content -->
+      <img src="https://img.freepik.com/free-vector/people-exercising-indoors-home-yoga-fitness-healthy-lifestyle_190729-96.jpg?size=626&ext=jpg" alt="Placeholder image">
+      <!--     <img src="https://source.unsplash.com/zFrUz_tNjCY" alt="placeholder">
+      -->    <!-- end content -->
+       </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+         </div>
+              <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+            <script>
+      document.addEventListener("DOMContentLoaded", function() {
+      //The first argument are the elements to which the plugin shall be initialized
+      //The second argument has to be at least a empty object or a object with your desired options
+      OverlayScrollbars(document.querySelectorAll("body"), { });
+      });
+      </script>

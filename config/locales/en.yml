@@ -1,0 +1,97 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+
+
+# use of localized string where necassary and made my app more efficient by use of it
+en:
+
+  home:
+    home:
+      app_title: "Calorie-track"
+      track: "Tracking Calories"
+      back: "We Got Your Back"
+      login: "Login/Signup"
+      zack: "Create a Category for your entry first, so you can start using our web app  -"
+      cool: " To use our web app and the cool features it provides"
+      track: "Trackers"
+      define: "People Want to Stay fit and this application's sole purpose is to give people a chance to stay fit and try to track what they eat everday"
+      fitness: "Fitness Is Everything."
+      level: "We take it to another level, Calorie Track is an idea that is going to uniquely benifit people's life, Now you cant forget what you ate yesterday as we got your back."
+      noodle-bar: "When you are signed in, and you want to see your entries press the noodle bar icon on the top left corner"
+      categories: "Categories"
+      start: "To Start Tracking You need to first create a category for your meal, which can be "
+      strong: "Weight-Loss, Building Muscle & Snacks"
+      pi: " so you know that what you ate at that specific time and at a later time it will help you."
+      calory: "Calories"
+      power: "The power of tracking "
+      simple: " in a simple interface"
+      weight: "Weight"
+      protien: "Protiens"
+      fat: "Fats"
+      carb: "Carbohydrates"
+      category: "Category"
+
+    contact:
+       tittle: Contact
+       title: Contact Us
+       contact_us: Complete the following form to get in touch with us.
+
+       name: "Name"
+       enter_name: Enter your name
+       email: "Email"
+       enter_email: Enter your email address
+       telephone: "Telephone"
+       enter_telephone: Enter your telephone number
+       message: "Message"
+       enter_message: What do you want to say?
+       submit: Contact Us
+
+    request_contact:
+       no_email: You must supply an email address
+       email_sent: Thank you. We will be in touch shortly
+
+  entries:
+     index:
+       calories: " Calories,"
+       protien: " (g) Protein,"
+       carb: " (g) Carb,"
+       fat: " (g) Fat"
+       create_entry: "Create Entry"
+     show:
+       calorie: "Calories: "
+       protien: "Protien: "
+       carbs: "Carbohydrates: "
+       fatts: "Fats: "
+
+  categories:
+     index:
+       create_category: "New Category"

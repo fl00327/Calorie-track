@@ -1,0 +1,28 @@
+
+
+<div class="columns is-centered mt-6">
+   <div class="column is-half">
+     <% @entries.each  do |entries| %>
+            <div class="card">
+             <div class="card-content">
+               <strong><%= entries.meal_type %> | <%= entries.category.title %></strong><br/>
+                <%= entries.calories %><%= t('.calories') %>
+                <%= entries.protien %><%= t('.protien') %>
+                <%= entries.carbohydrates%><%= t('.carb') %>
+                <%= entries.fats %><%= t('.fat') %>
+                <p class="italic">Created <%= time_ago_in_words(entries.created_at) %> ago</p>
+             </div>
+
+             <div class="card-footer">
+                 <%= link_to 'Show', entries, class: "card-footer-item" %>
+                 <%= link_to 'Edit', edit_entry_path(entries), class: "card-footer-item" %>
+                 <%= link_to 'Destroy', entries, method: :delete, data: { confirm: 'Are you sure?'}, class: "card-footer-item" %>
+             </div>
+           </div>
+         <% end %>
+</div>
+</div>
+
+<div class="columns is-centered mt-6">
+  <%= link_to t('.create_entry'), new_entry_path, class: "button is-success is-outlined is-centered" %>
+</div>

@@ -1,0 +1,22 @@
+<div class="columns is-centered mt-6">
+   <div class="column is-half">
+     <% @weights.each  do |weight| %>
+            <div class="card">
+             <div class="card-content">
+               <strong><%= weight.weight %> (Kg)</strong><br/>
+                <p class="italic">Your Weight <%= time_ago_in_words(weight.created_at) %> ago</p>
+             </div>
+
+             <div class="card-footer">
+                 <%= link_to 'Show', weight, class: "card-footer-item" %>
+                 <%= link_to 'Edit', edit_weight_path(weight), class: "card-footer-item" %>
+                 <%= link_to 'Destroy', weight, method: :delete, data: { confirm: 'Are you sure?'}, class: "card-footer-item" %>
+             </div>
+           </div>
+         <% end %>
+</div>
+</div>
+
+<div class="columns is-centered mt-6">
+  <%= link_to 'New Weight', new_weight_path, class: "button is-danger is-outlined is-centered" %>
+</div>

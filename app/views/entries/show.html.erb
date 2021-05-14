@@ -1,0 +1,36 @@
+<!-- designed the code and using field and jquery -->
+<div class="columns mt-6 is-centered">
+  <div class="column is-one-third">
+    <nav class="panel is-link">
+      <p class="panel-heading">
+          <%= @entry.meal_type %>:
+          <%= @entry.category.title %>
+      </p>
+
+      <div class="panel-block">
+          <%= t('.calorie') %><%= @entry.calories %>
+      </div>
+
+      <div class="panel-block">
+        <%= t('.protien') %><%= @entry.protien %>
+      </div>
+
+      <div class="panel-block">
+        <%= t('.carbs') %><%= @entry.carbohydrates %>
+      </div>
+
+      <div class="panel-block">
+        <%= t('.fatts') %><%= @entry.fats %>
+     </div>
+   </nav>
+
+  <div class="columns is-mobile">
+     <div class="column">
+        <%= link_to 'Edit', edit_entry_path(@entry), class: "button is-gray"%>
+        <input id="darkb" onclick="SetPageStyle('Dark')" type="button" value="Click-Me" class="button is-grey"></input>
+     </div>
+     <div class="column">
+     </div>
+   </div>
+ </div>
+</div>

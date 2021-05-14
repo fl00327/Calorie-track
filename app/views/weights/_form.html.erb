@@ -1,0 +1,26 @@
+<%= form_with(model: weight, local: true) do |form| %>
+  <% if weight.errors.any? %>
+    <div class="message is-danger">
+        <div class="message-header">
+          <p><h2><%= pluralize(weight.errors.count, "error") %> prohibited this weight from being saved:</h2></p>
+       </div>
+
+      <div class="message-body">
+      <ul>
+      <% weight.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :weight, class: "label" %>
+    <%= form.text_field :weight, class: "input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "button is-success" %>
+  </div>
+<% end %>
